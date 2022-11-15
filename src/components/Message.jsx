@@ -1,22 +1,33 @@
 import React from "react";
-import './Message.css'
+import "./Message.css";
 import PropTypes from "prop-types";
-export function Message({text, backgroundColor, isReceived}) {
-    const msgfilter = isReceived ? {filter: 'saturate(35%) brightness(1.15)'} : {};
-    const direction = isReceived ? {borderRadius: '15px 50px 30px 5px'} : {borderRadius: '50px 15px 5px 30px'}
-    return(
-    <div className='message' style={{backgroundColor: backgroundColor, ...msgfilter, ...direction}}>
-        <p1 style={{fontSize: 20}}>
-            {text}
-        </p1>
+export function Message({ text, backgroundColor, isReceived }) {
+  const msgfilter = isReceived
+    ? { filter: "saturate(35%) brightness(1.35)" }
+    : {};
+  const direction = isReceived
+    ? { borderRadius: "15px 50px 30px 5px" }
+    : { borderRadius: "50px 15px 5px 30px" };
+  const indent = !isReceived && { marginLeft: 200 };
+  return (
+    <div
+      className="message"
+      style={{
+        backgroundColor: backgroundColor,
+        ...msgfilter,
+        ...direction,
+        ...indent,
+      }}
+    >
+      <p1 style={{ fontSize: 20 }}>{text}</p1>
     </div>
-    )
+  );
 }
 Message.propTypes = {
-    text: PropTypes.string,
-    backgroundColor: PropTypes.string,
-    isReceived: PropTypes.bool
-}
+  text: PropTypes.string,
+  backgroundColor: PropTypes.string,
+  isReceived: PropTypes.bool,
+};
 Message.defaultProps = {
-    isReceived:false
-}
+  isReceived: false,
+};
