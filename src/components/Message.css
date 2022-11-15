@@ -1,0 +1,7 @@
+.message{
+    padding: 20px;
+    margin: 15px;
+    justify-content: flex-start;
+    border-radius: 15px 50px 30px 5px;
+    max-width: 250px;
+}
