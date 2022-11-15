@@ -1,15 +1,13 @@
 import { Message } from "../components/Message";
 import { useState } from "react";
 import { Button } from "../components/Button";
+import "./Chat.css";
+import { useColor } from "../api/hooks/useColor";
 
 export function Chat() {
   const [messages, setMessages] = useState([]);
   const [text, setText] = useState("");
-  const colors = {
-    primary: "#81968F",
-    secondary: "#96BDC6",
-    tertiary: "#FFF5F5",
-  };
+  const { colors } = useColor();
   const onSubmit = (event) => {
     event.preventDefault();
     setMessages([...messages, text]);
@@ -34,7 +32,14 @@ export function Chat() {
         return <Message backgroundColor={"#81968F"} text={message} />;
       })}
       <footer>
-        <form onSubmit={onSubmit} style={{ flexShrink: 10 }}>
+        <form
+          onSubmit={onSubmit}
+          style={{
+            flexShrink: 10,
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
           <textarea
             value={text}
             onChange={(e) => setText(e.target.value)}
@@ -42,9 +47,11 @@ export function Chat() {
               width: "70%",
               minHeight: 30,
               margin: 10,
+              padding: 10,
               fontSize: 18,
               fontFamily: "inherit",
               overflowWrap: "break-word",
+              borderRadius: 20,
             }}
           />
           <Button
