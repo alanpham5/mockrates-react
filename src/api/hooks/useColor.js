@@ -8,7 +8,9 @@ export function useColor() {
   };
 
   const [theme, setTheme] = useState(
-    JSON.parse(localStorage.getItem("theme") ?? defaultColor)
+    localStorage.getItem("theme")
+      ? JSON.parse(localStorage.getItem("theme"))
+      : defaultColor
   );
 
   useEffect(() => {
