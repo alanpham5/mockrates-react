@@ -19,7 +19,7 @@ export function Message({ text, backgroundColor, isReceived }) {
         ...indent,
       }}
     >
-      <p1 style={{ fontSize: 20 }}>{text}</p1>
+      <p1 style={{ fontSize: 16 }}>{text}</p1>
     </div>
   );
 }
