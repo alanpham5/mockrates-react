@@ -6,7 +6,7 @@ export function Settings() {
   };
   return (
     <div
-      style={{ padding: 30, minHeight: 1080, backgroundColor: colors.tertiary }}
+      style={{ padding: 30, height: "100vh", backgroundColor: colors.tertiary }}
     >
       <h1>This is the settings page.</h1>
     </div>
