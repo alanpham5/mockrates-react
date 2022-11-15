@@ -55,6 +55,7 @@ export function Chat() {
         justifyContent: "left",
         backgroundColor: colors.tertiary,
         backgroundSize: "cover",
+        minHeight: "100vh",
       }}
     >
       <div>
