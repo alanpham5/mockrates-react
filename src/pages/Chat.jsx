@@ -53,27 +53,34 @@ export function Chat() {
       style={{
         padding: 30,
         justifyContent: "left",
-        height: "100vh",
         backgroundColor: colors.tertiary,
+        backgroundSize: "cover",
       }}
     >
-      <h1>This is the chat page.</h1>
-      <Message
-        backgroundColor={colors.primary}
-        text={sockyMessages[0].text}
-        isReceived={true}
+      <div>
+        <h1>This is the chat page.</h1>
+        <Message
+          backgroundColor={colors.primary}
+          text={sockyMessages[0].text}
+          isReceived={true}
+        />
+        {messages.map((message) => {
+          return (
+            <Message
+              backgroundColor={colors.primary}
+              text={message.text}
+              isReceived={message.received}
+            />
+          );
+        })}
+      </div>
+      <div
+        style={{
+          height: "10vh",
+          margin: 0,
+        }}
       />
-      {messages.map((message) => {
-        return (
-          <Message
-            backgroundColor={colors.primary}
-            text={message.text}
-            isReceived={message.received}
-          />
-        );
-      })}
-      <div style={{ minHeight: "10%", backgroundColor: colors.tertiary }} />
-      <footer style={{ backgroundColor: colors.tertiary }}>
+      <footer>
         <form
           onSubmit={onSubmit}
           style={{
