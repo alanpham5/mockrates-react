@@ -2,11 +2,18 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "../components/Button";
 export function Home() {
   const navigate = useNavigate();
+  const colors = {
+    primary: "#81968F",
+    secondary: "#96BDC6",
+    tertiary: "#FFF5F5",
+  };
   return (
-    <div style={{ margin: 20 }}>
+    <div
+      style={{ padding: 30, minHeight: 1080, backgroundColor: colors.tertiary }}
+    >
       <h1>This is the home page.</h1>
       <Button
-        backgroundColor={"#81968F"}
+        backgroundColor={colors.primary}
         label="Chat with Socky"
         onClick={() => {
           navigate("/chat");
@@ -14,7 +21,7 @@ export function Home() {
       />
       <br />
       <Button
-        backgroundColor={"#81968F"}
+        backgroundColor={colors.secondary}
         label="Settings"
         onClick={() => {
           navigate("/settings");
