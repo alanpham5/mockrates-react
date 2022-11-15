@@ -38,7 +38,7 @@ export function Chat() {
             value={text}
             onChange={(e) => setText(e.target.value)}
             style={{
-              width: 400,
+              width: "70%",
               minHeight: 30,
               margin: 10,
               fontSize: 18,
