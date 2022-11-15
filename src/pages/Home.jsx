@@ -1,12 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "../components/Button";
+import { useColor } from "../api/hooks/useColor";
 export function Home() {
   const navigate = useNavigate();
-  const colors = {
-    primary: "#81968F",
-    secondary: "#96BDC6",
-    tertiary: "#FFF5F5",
-  };
+  const { colors } = useColor();
   return (
     <div
       style={{ padding: 30, height: "100vh", backgroundColor: colors.tertiary }}
