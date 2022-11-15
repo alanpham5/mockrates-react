@@ -11,7 +11,7 @@ export function Chat() {
     setText("");
   };
   return (
-    <div>
+    <div style={{ margin: 20 }}>
       <h1>This is the chat page.</h1>
       <Message
         backgroundColor={"#81968F"}
@@ -26,6 +26,7 @@ export function Chat() {
           type="text"
           value={text}
           onChange={(e) => setText(e.target.value)}
+          style={{ width: 400, height: 30, margin: 10, fontSize: 18 }}
         />
         <Button backgroundColor={"#81968F"} label="Send" type="submit" />
       </form>
