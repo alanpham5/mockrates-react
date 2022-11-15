@@ -1,3 +1,7 @@
 export function Settings() {
-  return <h1>This is the settings page.</h1>;
+  return (
+    <div style={{ margin: 20 }}>
+      <h1>This is the settings page.</h1>
+    </div>
+  );
 }
