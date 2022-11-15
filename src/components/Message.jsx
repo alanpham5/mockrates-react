@@ -8,7 +8,7 @@ export function Message({ text, backgroundColor, isReceived }) {
   const direction = isReceived
     ? { borderRadius: "15px 50px 30px 5px" }
     : { borderRadius: "50px 15px 5px 30px" };
-  const indent = !isReceived && { marginLeft: 200 };
+  const indent = !isReceived && { marginLeft: "10%" };
   return (
     <div
       className="message"
