@@ -29,7 +29,7 @@ export function Chat() {
         isReceived={true}
       />
       {messages.map((message) => {
-        return <Message backgroundColor={"#81968F"} text={message} />;
+        return <Message backgroundColor={colors.primary} text={message} />;
       })}
       <footer>
         <form
