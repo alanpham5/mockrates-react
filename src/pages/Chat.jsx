@@ -19,6 +19,7 @@ export function Chat() {
     <div
       style={{
         padding: 30,
+        justifyContent: "left",
         height: "100vh",
         backgroundColor: colors.tertiary,
       }}
