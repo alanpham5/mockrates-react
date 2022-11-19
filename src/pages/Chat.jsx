@@ -37,7 +37,7 @@ const app = initializeApp(firebaseConfig);
 // const auth = getAuth(app);     // For authentication with sponsors' firestore
 const db = getFirestore(app);     // db is the instance of Firestore
 
-// Supposed the user has a user ID "4".
+// Supposed the user has a user ID "2".
 const uid = 2;
 
 
