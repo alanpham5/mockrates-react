@@ -1,8 +1,8 @@
 .color {
-    position: relative;
-    width: 10vh;
-    height: 10vh;
-    border-radius: 50%;
-    border: solid white;
-    display: inline-block;
+  position: relative;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  border: solid white;
+  display: inline-block;
 }
