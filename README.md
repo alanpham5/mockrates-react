@@ -1,3 +1,8 @@
+## Description
+
+This project was a senior group project for the University of Californa, Irvine Donald Bren School of Information and Computer Sciences. It's a proof-of-concept for an automated conversational journaling application for Socrates.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
