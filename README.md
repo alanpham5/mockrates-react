@@ -2,6 +2,7 @@
 
 This project was a senior group project for the University of Californa, Irvine Donald Bren School of Information and Computer Sciences. It's a proof-of-concept for an automated conversational journaling application for Socrates.
 
+mockrates-react.vercel.app
 
 # Getting Started with Create React App
 
